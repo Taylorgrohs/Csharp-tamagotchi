@@ -1,0 +1,16 @@
+<h1>Your Tamagotchi Collection</h1>
+<ol>
+  @foreach(var tamagotchi in Model)
+  {
+    <li>Name: @tamagotchi.GetName()</li>
+    <ul>
+      <li>Food: @tamagotchi.GetFood()</li>
+      <li>Attention: @tamagotchi.GetAttention()</li>
+      <li>Sleep: @tamagotchi.GetSleep()</li>
+    </ul>
+  }
+</ol>
+<form action="/tamagotchis_time" method="post">
+  <button type="submit" name="button">Time</button>
+</form>
+<a href="/tamagotchis/new">Create a new Tamagotchi</a>
